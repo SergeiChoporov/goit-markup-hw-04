@@ -7,6 +7,9 @@
   --Color-background: #2f303a;
   --color-team-background: #f5f4fa;
   --color-wrapper: #eeeeee;
+  --color-team-icons: #afb1b8;
+  --social-bg-color: rgba(245, 244, 250, 1);
+  --color-footer-icon: rgba(255, 255, 255, 0.1);
 }
 
 /* Base */
@@ -158,6 +161,25 @@ img {
   padding: 32px 0;
 }
 
+.contacts-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--color-accent);
+}
+
+.contacts-item:hover .icon-contacts {
+  fill: var(--color-accent);
+}
+
+.icon-contacts {
+  margin-right: 10px;
+  fill: var(--text-color-gray);
+}
+
 .hero {
   max-width: 1600px;
   height: 600px;
@@ -289,6 +311,7 @@ img {
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .products {
@@ -337,6 +360,11 @@ img {
   background-color: var(--Color-background);
 }
 
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
 .footer-logo {
   display: block;
   margin-bottom: 20px;
@@ -350,6 +378,10 @@ img {
   display: flex;
   flex-direction: column;
   gap: 9px;
+}
+
+.our-contacts {
+  margin-right: 70px;
 }
 
 .footer-contacts {
@@ -381,3 +413,142 @@ img {
   border: 1px solid var(--color-wrapper);
   border-top: none;
 }
+
+.icone-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+/**Socials icons**/
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
+.socials-icons {
+  fill: var(--color-team-icons);
+}
+
+.socials-link:hover {
+  background-color: var(--color-accent);
+}
+
+.socials-link:hover .socials-icons {
+  fill: var(--color-white);
+}
+
+.socials-link:focus {
+  background-color: var(--color-accent);
+}
+
+.socials-link:focus .socials-icons {
+  fill: var(--color-white);
+}
+
+/**Features icons**/
+
+.footer-social-icon {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 10px;
+}
+
+.foot-icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-footer-icon);
+  fill: var(--color-white); 
+  border-radius: 50%;
+}
+
+.foot-icon:hover,
+.foot-icon:focus {
+   background-color: var(--color-accent);
+   fill: var(--color-white);
+}
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.peculiarities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: var(--social-bg-color);
+}
+
+.clients-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+.clients-item:hover {
+  border-color: var(--color-accent);
+}
+
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92px;
+  width: 170px;
+  fill: var(--color-team-icons);
+  border: 1px solid var(--color-team-icons);
+  border-radius: 4px;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--color-accent);
+  fill: var(--color-accent);
+}
+
+
