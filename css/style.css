@@ -143,18 +143,18 @@ img {
   font-weight: 500;
   line-height: 1.15;
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link:hover,
 .nav-link:focus,
 .contact-link:hover,
-.contact-link:focus .current .accent {
+.contact-link:focus, .current {
   color: var(--color-accent);
 }
 
-.nav-link.link.current {
-  color: var(--color-accent);
-}
+
 
 .nav-link {
   display: block;
@@ -171,13 +171,10 @@ img {
   color: var(--color-accent);
 }
 
-.contacts-item:hover .icon-contacts {
-  fill: var(--color-accent);
-}
 
 .icon-contacts {
   margin-right: 10px;
-  fill: var(--text-color-gray);
+  fill: currentColor;
 }
 
 .hero {
@@ -266,6 +263,10 @@ img {
   color: var(--color-white);
 }
 
+.filter-btn.active:hover {
+   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .filter-btn {
   font-weight: 500;
   font-size: 16px;
@@ -284,11 +285,17 @@ img {
   color: #ffffff;
 }
 
+.filter-btn:hover {
+   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .section-team {
   background-color: var(--color-team-background);
 }
 
+
 .team-cards {
+   flex-basis: calc((100% - 3 * 30px) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -321,6 +328,15 @@ img {
   color: var(--text-color-gray);
 }
 
+.feature-wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 30px;
+   height: 120px;
+   background-color: var(--social-bg-color);
+ }
+
 .feature-title {
   color: var(--text-color-black);
   font-size: 14px;
@@ -346,12 +362,17 @@ img {
   flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
-.portfolio-item:hover {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
+.portfolio-link{
+   display: inline-block;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+ 
 
 /*footer*/
 .footer {
@@ -363,6 +384,7 @@ img {
 .footer-container {
   display: flex;
   align-items: baseline;
+  gap: 70px;
 }
 
 .footer-logo {
@@ -380,9 +402,6 @@ img {
   gap: 9px;
 }
 
-.our-contacts {
-  margin-right: 70px;
-}
 
 .footer-contacts {
   font-style: normal;
@@ -416,8 +435,7 @@ img {
 
 .icone-title {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-white);
@@ -443,84 +461,47 @@ img {
 }
 
 .socials-icons {
-  fill: var(--color-team-icons);
+   fill: var(--color-team-icons);
 }
 
-.socials-link:hover {
-  background-color: var(--color-accent);
+.footer .socials-link {
+   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.socials-link:hover .socials-icons {
+
+.footer .socials-icons {
   fill: var(--color-white);
 }
 
+.socials-link:hover,
 .socials-link:focus {
   background-color: var(--color-accent);
 }
 
+.socials-link:hover .socials-icons,
 .socials-link:focus .socials-icons {
   fill: var(--color-white);
 }
 
+
 /**Features icons**/
 
-.footer-social-icon {
+.foot-icon {
    display: flex;
    flex-wrap: wrap;
+   align-items: center;
    justify-content: center;
-   gap: 10px;
+   width: 44px;
+   height: 44px;
+   background-color: var(--color-footer-icon);
+   fill: var(--color-white); 
+   border-radius: 50%;
 }
 
-.foot-icon {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background-color: var(--color-footer-icon);
-  fill: var(--color-white); 
-  border-radius: 50%;
+.clients-item {
+   flex-basis: calc((100% - 5 * 30px) / 6);
 }
 
-.foot-icon:hover,
-.foot-icon:focus {
-   background-color: var(--color-accent);
-   fill: var(--color-white);
-}
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.peculiarities {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  width: 270px;
-  height: 120px;
-  background-color: var(--social-bg-color);
-}
 
 .clients-items {
   display: flex;
@@ -528,6 +509,7 @@ img {
   justify-content: center;
   gap: 30px;
 }
+
 
 
 .clients-item:hover {
@@ -540,6 +522,7 @@ img {
   justify-content: center;
   height: 92px;
   width: 170px;
+ 
   fill: var(--color-team-icons);
   border: 1px solid var(--color-team-icons);
   border-radius: 4px;
